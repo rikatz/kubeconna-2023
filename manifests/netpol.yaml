@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: kubecon-ingress-only
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      app: kubeconapp
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: kubeconapp
+
