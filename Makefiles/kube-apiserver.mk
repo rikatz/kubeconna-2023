@@ -15,7 +15,7 @@ apiserver-break: ## Breaks the Kubernetes API Server
 .PHONY: apiserver-check
 apiserver-check: ## Checks the Kubernetes API Server
 	@echo "------ CHECKING $(APISERVER) -----------"
-	kubectl get pods -n kube-system -l component=$(APISERVER)
+	-kubectl get pods -n kube-system -l component=$(APISERVER)
 
 .PHONY: apiserver-fix
 apiserver-fix: ## Fixes the Kubernetes API Server

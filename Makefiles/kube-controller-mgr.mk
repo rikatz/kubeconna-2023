@@ -13,7 +13,7 @@ controllermgr-break: ## Breaks the Kubernetes Controller Manager
 .PHONY: controllermgr-check
 controllermgr-check: ## Checks the Kubernetes Controller Manager Pods status
 	@echo "------ CHECKING $(CONTROLLER) -----------"
-	kubectl get pods -n kube-system -l component=$(CONTROLLER)
+	-kubectl get pods -n kube-system -l component=$(CONTROLLER)
 	@echo ""
 
 .PHONY: controllermgr-fix

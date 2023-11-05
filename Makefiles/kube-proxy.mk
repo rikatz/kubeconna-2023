@@ -16,7 +16,7 @@ proxy-break: ## Breaks kube-proxy on all nodes
 .PHONY: proxy-check
 proxy-check: ## Checks the kube-proxy resources status
 	@echo "------ CHECKING $(PROXY) -----------"
-	kubectl get daemonset -n kube-system $(PROXY)
+	-kubectl get daemonset -n kube-system $(PROXY)
 	@echo ""
 
 .PHONY: proxy-fix

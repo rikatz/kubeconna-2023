@@ -13,7 +13,7 @@ scheduler-break: ## Breaks the Kubernetes Scheduler
 .PHONY: scheduler-check
 scheduler-check: ## Checks the Kubernetes Scheduler Pods status
 	@echo "------ CHECKING $(SCHEDULER) -----------"
-	kubectl get pods -n kube-system -l component=$(SCHEDULER)
+	-kubectl get pods -n kube-system -l component=$(SCHEDULER)
 	@echo ""
 
 .PHONY: scheduler-fix

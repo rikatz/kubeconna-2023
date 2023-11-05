@@ -11,7 +11,14 @@ broken Kubernetes cluster, and then fix it.
 ## Getting started
 * Clone this repo: `git clone https://github.com/rikatz/kubeconna-2023.git`
 * Run `make start`
+After this you will have a kind clusters and you should expect a functional kind cluster.
+
 * Run `make break`
+With this make break everything should be broken (duh).
+
+* Run `make help` if you want to explore other possible make targets. 
+
+
 * Run `make deploy-app DEPLOY_NAME=app1`
 * Run `make deploy-app DEPLOY_NAME=app2`
 

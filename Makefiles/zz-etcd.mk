@@ -14,7 +14,7 @@ etcd-break: ## Breaks ETCD
 .PHONY: etcd-check
 etcd-check: ## Checks ETCD
 	@echo "------ CHECKING $(ETCD) -----------"
-	kubectl get pods -n kube-system -l component=$(ETCD)
+	-kubectl get pods -n kube-system -l component=$(ETCD)
 	@echo ""
 
 .PHONY: etcd-fix

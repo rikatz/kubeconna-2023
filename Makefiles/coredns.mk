@@ -12,7 +12,7 @@ coredns-break: ## Breaks CoreDNS
 .PHONY: coredns-check
 coredns-check: ## Checks COREDNS
 	@echo "------ CHECKING $(APISERVER) -----------"
-	kubectl get deploy -n kube-system  $(COREDNS)
+	-kubectl get deploy -n kube-system  $(COREDNS)
 	@echo ""
 
 .PHONY: coredns-fix

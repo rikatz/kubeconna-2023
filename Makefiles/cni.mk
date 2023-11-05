@@ -17,7 +17,7 @@ cni-break: ## Breaks the CNI
 .PHONY: cni-check
 cni-check: ## Checks the CNI and show the output
 	@echo "------ CHECKING CNI -----------"
-	kubectl get daemonset -n kube-system kindnet
+	-kubectl get daemonset -n kube-system kindnet
 	@echo ""
 	@echo "Getting worker nodes routes"
 	@for i in $(NODES); do \
