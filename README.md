@@ -3,8 +3,13 @@
 This repo contains a set of scripts/programs that will help you to have your own 
 broken Kubernetes cluster, and then fix it.
 
+## Pre requisites
+* [Kubectl](https://www.downloadkubernetes.com/)
+* [Docker](https://docs.docker.com/engine/install/)
+* [KinD](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 
 ## Getting started
+* Clone this repo: `git clone https://github.com/rikatz/kubeconna-2023.git`
 * Run `make start`
 * Run `make break`
 * Run `make deploy-app DEPLOY_NAME=app1`
