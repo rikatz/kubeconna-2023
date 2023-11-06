@@ -3,6 +3,9 @@
 This repo contains a set of scripts/programs that will help you to have your own 
 broken Kubernetes cluster, and then fix it.
 
+**WORK IN PROGRESS** - This repo is a Work in Progress and we plan to document all the items we 
+covered during the presentation + some additional docs!!
+
 ## Pre requisites
 * [Kubectl](https://www.downloadkubernetes.com/)
 * [Docker](https://docs.docker.com/engine/install/)
