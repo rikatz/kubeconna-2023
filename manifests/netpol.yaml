@@ -6,12 +6,12 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      app: kubeconapp
+      app: app1
   policyTypes:
     - Ingress
   ingress:
     - from:
         - podSelector:
             matchLabels:
-              app: kubeconapp
+              app: app2
 

@@ -63,11 +63,12 @@ check: $(addsuffix -check, $(call reverse, $(COMPONENTS))) etcd-check ## Check c
 
 .PHONY: deploy-app
 deploy-app: ## Deploys a new application instance to be tested
-	@kubectl create deploy $(DEPLOY_NAME) --replicas=$(REPLICAS) --image=$(IMAGE)
+	kubectl create deploy $(DEPLOY_NAME) --replicas=$(REPLICAS) --image=$(IMAGE)
 	@kubectl patch deploy $(DEPLOY_NAME) --type='json' \
 	-p='[{"op": "replace", "path": "/spec/template/spec/containers/0/imagePullPolicy", "value": "IfNotPresent"}]'
-	@kubectl expose deploy $(DEPLOY_NAME) --port=9000
+	kubectl expose deploy $(DEPLOY_NAME) --port=9000
 
 .PHONY: remove-app
 remove-app: ## Removes the previously deployed app
-	@kubectl delete deploy $(DEPLOY_NAME)
+	kubectl delete deploy $(DEPLOY_NAME)
+	kubectl delete svc $(DEPLOY_NAME)

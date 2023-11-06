@@ -22,6 +22,6 @@ kubelet-check: ## Checks Kubelet
 .PHONY: kubelet-fix
 kubelet-fix: ## Fixes Kubelet
 	@echo "Fixing kubelet"
-	@for i in $(NODES); do \
+	for i in $(NODES); do \
     	docker exec -it $$i systemctl start kubelet; \
     done
